@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+			  margin: 0;
+			  padding: 0;
+			}
+			
+			img {
+			  border: none;
+			}
+			
+			a {
+			  text-decoration: none;
+			}
+			
+			li {
+			  list-style: none;
+			}
+			
+			body {
+			  font-family: "Microsoft Yahei";
+			  font-size: 16px;
+			  width: 100%;
+			}
+			
+			.fl {
+			  float: left;
+			}
+			
+			.fr {
+			  float: right;
+			}
+			
+			.clearfix {
+			  *zoom: 1;
+			}
+			.clearfix:after {
+			  display: block;
+			  overflow: hidden;
+			  visibility: hidden;
+			  height: 0;
+			  content: '.';
+			  clear: both;
+			}
+			
+			.area_width {
+			  width: 1200px;
+			  margin: 0 auto;
+			}
+			.img1{
+				 width: 300px;
+			  	 height: 265px;
+			  	 overflow: hidden;
+			}
+			.img1 img {
+			  width: 300px;
+			  height: 265px;
+			  transition: all, 0.8s,ease-out;
+			  -webkit-transition: all, 0.8s, ease-out;
+			  -moz-transition: all, 0.8s, ease-out;
+			  -o-transition: all, 0.8s,ease-out;
+			}
+			.img1 img:hover {
+			  transform: matrix(1.06, 0, 0, 1.06, 0, 0);
+			  -webkit-transform: matrix(1.06, 0, 0, 1.06, 0, 0);
+			  -moz-transform: matrix(1.06, 0, 0, 1.06, 0, 0);
+			  -o-transform: matrix(1.06, 0, 0, 1.06, 0, 0);
+			}
+		/*******************************************************/	
+			.service li {
+			  position: relative;
+			  width: 300px;
+			  height: 266px;
+			  float: left;
+			}
+			.service .data {
+			  position: absolute;
+			  z-index: 100;
+			  background: #000;
+			  filter: Alpha(opacity=70);
+			  -moz-opacity: 0.7;
+			  opacity: 0.7;
+			  -khtml-opacity: 0.7;
+			  color: #fff;
+			  width: 180px;
+			  height: 206px;
+			  padding: 30px 60px;
+			  top: 0;
+			  text-align: center;
+			}
+			.service li:hover {
+			  transition: all, 0.2s, ease-out;
+			  -webkit-transition: all, 0.2s, ease-out;
+			  -moz-transition: all, 0.2s, ease-out;
+			  -o-transition: all, 0.2s, ease-out;
+			}
+			.service li:hover .line {
+			  display: none;
+			}
+			.service li:hover .data {
+			  position: absolute;
+			  z-index: 100;
+			  background: #d8171a;
+			  filter: Alpha(opacity=70);
+			  -moz-opacity: 0.7;
+			  opacity: 0.7;
+			  -khtml-opacity: 0.7;
+			  color: #fff;
+			  width: 180px;
+			  height: 206px;
+			  padding: 30px 60px;
+			  top: 0;
+			  text-align: center;
+			  transition: all, 0.3s, ease-out;
+			  -webkit-transition: all, 0.3s, ease-out;
+			  -moz-transition: all, 0.3s, ease-out;
+			  -o-transition: all, 0.3s, ease-out;
+			}
+			.service li:hover p {
+			  opacity: 1;
+			}
+			.service li:hover h3 {
+			  font-size: 24px;
+			}
+			.service li:hover i {
+			  margin-top: 0;
+			}
+			.service li:hover .more {
+			  opacity: 1;
+			}
+			.service i {
+			  width: 35px;
+			  height: 35px;
+			  display: block;
+			  margin: 0 auto;
+			  margin-top: 34px;
+			  margin-bottom: 8px;
+			  font-family: 'iconfont';
+			  font-style: normal;
+			  font-size: 50px;
+			}
+			.service .line {
+			  width: 15px;
+			  height: 2px;
+			  background: #fff;
+			  margin-left: 87px;
+			  margin-top: 30px;
+			}
+			.service h3 {
+			  font-size: 28px;
+			  font-family: "Microsoft Yahei";
+			  font-weight: normal;
+			  line-height: 2.2em;
+			}
+			.service p {
+			  font-size: 12px;
+			  opacity: 0;
+			  line-height: 1.6em;
+			}
+			.service .more {
+			  display: block;
+			  width: 77px;
+			  height: 22px;
+			  line-height: 22px;
+			  border: 1px solid #fff;
+			  font-size: 12px;
+			  color: #fff;
+			  margin: 30px auto;
+			  opacity: 0;
+			}
+			.service .more:hover {
+			  color: #fff;
+			}
+			/*********************************************************************/
+			.img3 img {
+			  width: 300px;
+			  height: 265px;
+			  transition: all 0.3s;
+			  margin: 0;
+			}
+			.img3:hover img {
+			  transform: scale(1.01);
+			}
+			/***********************************************************************/
+			.img4 .small:hover {
+			    -webkit-transform: translateY(-3px);
+			    -moz-transform: translateY(-3px);
+			    -ms-transform: translateY(-3px);
+			    transform: translateY(-3px);
+			    -webkit-box-shadow: 0 2px 10px 1px rgba(156,156,156,.3);
+			    box-shadow: 0 2px 10px 1px rgba(156,156,156,.3);
+			}
+			
+			.img4 .small {
+			    width: 524px;
+			    height: 360px;
+			    margin-bottom: 50px;
+			    margin-right: 50px;
+			    -webkit-transition: .2s all ease;
+			    -moz-transition: .2s all ease;
+			    transition: .2s all ease;
+			    display: block;
+			    position: relative;
+			    cursor: pointer;
+			}
+			
+			/********************************************************/
+			.project-list{
+			  margin-bottom: 50px;
+			  width: 1200px;
+			}
+			.project {
+			 
+			  float: left;
+			  margin-right: 10px; 
+			}
+			
+			.project-list:after {
+			  content: " ";
+			  display: block;
+			  clear: both; 
+			}
+			.project__image {
+			  display: block;
+			  position: relative; 
+			}
+			.project__image img {
+			  width: 100%;
+			  max-width: 100%;
+			  display: block; 
+			}
+			.project__image:after {
+			  content: " ";
+			  width: 100%;
+			  height: 100%;
+			  position: absolute;
+			  left: 0;
+			  top: 0;
+			  /*background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+			  transition: opacity .3s ease;
+			  opacity: 0; */
+			}
+			.project__card {
+			  position: relative;
+			  will-change: transform;
+			  transition: box-shadow .3s ease;
+			  box-shadow: 0 10px 30px transparent; 
+			}
+			.project__card.hover-in {
+			  transition: -webkit-transform .2s ease-out;
+			  transition: transform .2s ease-out;
+			  transition: transform .2s ease-out, -webkit-transform .2s ease-out; 
+			}
+			.project__card.hover-out {
+			  transition: -webkit-transform .2s ease-in;
+			  transition: transform .2s ease-in;
+			  transition: transform .2s ease-in, -webkit-transform .2s ease-in; 
+			}
+			.project:hover .project__card {
+			  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+			}
+			.project:hover .project__image:after {
+			  opacity: 1; 
+			}
+			.outAnima{
+				perspective: 1000px; transform-style: preserve-3d; transform: rotateX(0deg) rotateY(0deg);
+			}
+			.inAnima{
+				perspective: 1000px; transform-style: preserve-3d; transform: rotateX(1.55deg) rotateY(0.275deg);
+			}
+			/********************************************************/
+			.img5{
+				width: 300px;
+				height: 265px;
+				position: relative;
+				overflow: hidden;
+				text-align: center;
+			}
+			
+				
+			}
+			.img5 a{
+				color: #fff;
+				width: 300px;
+				height: 265px;
+				
+			}
+			.img5 img{
+				position: absolute;
+				width: 300px;
+				height: 265px;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				line-height: 1.5em;
+				transition: all .2s ease-in;
+			}
+			.img5.hoverIn img{
+				transform: scale(1.02);
+			}
+			.img5 .slideShow{
+				position: absolute;
+				left: 0;
+				z-index: 2;
+				width: 90%;
+				height: 55px;
+				padding:10px 5% ;
+				color: #fff;
+				background: #f4a000;
+				bottom: 0;
+			}
+			.img5  a{
+				padding: 3px 10px;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-o-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border: 1px solid #fff;
+				font-size: 12px;
+				color: #fff;
+			}
+			.img5 h2{
+				font-size: 18px;
+				margin-bottom: 10px;
+				
+			}
+			.img5 .slideHide{
+				position: absolute;
+				z-index: 9;
+				background: #f4a000;
+				width: 90%;
+				height: 90%;
+				padding: 5%;
+				color: #fff;
+				top: 100%;
+				transition: all .1s ease-out;
+			}
+			.img5 .slideHide p{
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+			.img5 .slideHide h2{
+				margin-top: 40px;
+			}
+			.img5 .slideShow:hover{
+				cursor:pointer;
+			}
+			.img5.hoverIn .slideHide{
+				top:0;
+			}
+		</style>
+	</head>
+	<body class="area_width">
+		<h2>1</h2>
+		<div class="img1"><img src="ser1.jpg"></div>
+		<h2>2</h2>
+		<div class="part service">
+				<ul class="clearfix">
+					<li class="active">
+						<img src="ser1.jpg">
+						<div class="data">
+							<i class="ui_icon_zs"></i>
+							<div class="line"></div>
+							<h3>招商服务</h3>
+							<p>招商前准备工作  招商工作执行  开业前准备工作  开业</p>
+							<a class="more" href="">查看详情</a>
+						</div>
+					</li>
+					<li>
+						<img src="ser1.jpg">
+						<div class="data">
+							<i class="ui_icon_gw"></i>
+							<div class="line"></div>
+							<h3>顾问服务</h3>
+							<p>市场研究  消费者研究  商家研究 项目分析  建筑设计业态组合  收益测算</p>
+							<a class="more" href="">查看详情</a>
+						</div>
+					</li>
+					<li>
+						<img src="ser1.jpg">
+						<div class="data">
+							<i class="ui_icon_yx"></i>
+							<div class="line"></div>
+							 <h3>营销代理</h3>
+							<p>市场研究  营销策略  项目包装  物料准备  客户积累  销售执行 </p>
+							<a class="more" href="">查看详情</a>
+						</div>
+					</li>
+					<li>
+						<img src="ser1.jpg">
+						<div class="data">
+							<i class="ui_icon_yy"></i>
+							<div class="line"></div>
+							<h3>运营服务</h3>
+							<p>规划阶段工作  招商阶段工作  运营顾问  全程商业托管  </p>
+							<a class="more" href="">查看详情</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<h2>3</h2>
+			<div class="img3">
+				<img src="ser1.jpg">
+			</div>
+			<h2>4</h2>
+			<div class="img4">
+				<a class="small" target="_blank" data_position="1" href="https://www.xiangrikui.com/baoxian/pa_pajk_0008.html?outer_channel=1801002001">
+					<img src="https://assets.xrkcdn.com/frontend-m/xrk-mall-frontend/xrk-mall-concat/static/cdn/cmall_static/img/yiliao/pic_1_c3d36ab.jpg" alt="(中国平安)平安e生保2017版">
+				</a>
+			</div>
+			<h2>5</h2>
+			<div class="project-list clearfix">
+
+				<div class="project" style="perspective: 1000px; transform-style: preserve-3d;">
+					<div class="project__card outAnima">
+						<a href="/nproduct/shaoer" class="project__image">
+							<img src="//s28.9956.cn/static/v6/index/images/list1.png?20160720" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="project outAnima" >
+					<div class="project__card outAnima" >
+						<a href="/nproduct/yiliao" class="project__image">
+							<img src="//s28.9956.cn/static/v6/index/images/list2.png?20160720" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="project" style="perspective: 1000px; transform-style: preserve-3d;">
+					<div class="project__card outAnima" >
+						<a href="/nproduct/yiwai" class="project__image">
+							<img src="//s28.9956.cn/static/v6/index/images/list3.png?20160720" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="project" style="perspective: 1000px; transform-style: preserve-3d;">
+					<div class="project__card outAnima" >
+						<a href="/nproduct/licai" class="project__image">
+							<img src="//s28.9956.cn/static/v6/index/images/list4.png?20160720" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="project" style="margin: 0px; perspective: 1000px; transform-style: preserve-3d;">
+					<div class="project__card outAnima" >
+						<a href="/zengxianX/pc" class="project__image">
+							<img src="//s28.9956.cn/static/v6/index/images/list6.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<h2>5</h2>
+			<div class="img5">
+				<img src="ser1.jpg">
+				<div class="slideShow"><h2>招商服务</h2><a href="">查看详情</a></div>
+				<div class="slideHide"><h2>招商服务</h2><p>场研究  营销策略  项目包装  物料准备  客户积累  销售执行</p><a href="">查看详情</a></div>
+			</div>
+	</body>
+</html>
+<script type="text/javascript" src="https://s28.9956.cn/static/v3_1/js/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('.project').hover(function(){
+			$('.project__card').removeClass('outAnima').addClass('inAnima');
+		},function(){
+			$('.project__card').removeClass('inAnima').addClass('outAnima');
+		})
+		
+		$('.img5').hover(function(){
+			$(this).addClass('hoverIn');
+		},function(){
+			$(this).removeClass('hoverIn');
+		})
+	})
+</script>
